@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     end
 
   node.vm.provision 'shell', inline: <<-EOF
-    sudo yum -y install epel-release wget net-tools unzip vim avahi avahi-tools
+    sudo yum -y install epel-release wget net-tools unzip vim avahi avahi-tools java-devel
     sudo systemctl enable avahi-daemon
     sudo systemctl start avahi-daemon
     mkdir tomcat
